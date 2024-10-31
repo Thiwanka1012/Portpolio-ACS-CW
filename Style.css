@@ -46,3 +46,28 @@ section{
     align-items: center;
     z-index: 100;
 }
+
+.logo{
+    font-size: 2.5rem;
+    color: var(--text-color);
+    font-weight: 700;
+    cursor: default;
+}
+
+.navbar a{
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin-left: 4rem;;
+    font-weight: 700;
+}
+
+.navbar a:hover,
+.navbar a.active{
+    color: var(--text-color);
+}
+
+#menu-icon{
+    font-size: 3.6rem;
+    color: var(--text-color);
+    
+}
