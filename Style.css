@@ -217,3 +217,50 @@ span{
     margin: 2rem o 3rem;
 }
 
+
+
+.Projects h2{
+    margin-bottom: 5rem;
+}
+
+
+.Projects-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+}
+
+.Projects-container .Projects-box{
+    flex: 1 1 30rem;
+    background: var(--snd-bg-color);
+    padding: 3rem 2rem 4rem;
+    border-radius: 2rem;
+    text-align: center;
+    border: .2rem solid var(--bg-color);
+    transition: .5s ease;
+}
+
+.Projects-container .Projects-box:hover{
+    border-color: var(--main-color);
+    transform: scale(1.02);
+
+}
+
+.Projects-box i{
+    font-size: 7rem;
+    color: var(--main-color);
+}
+
+.Projects-box h3{
+    font-size: 2.6rem;
+
+
+}
+
+.Projects-box p{
+    font-size: 1.6rem;
+    margin: 1rem 0 3rem;
+}
