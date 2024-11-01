@@ -176,3 +176,44 @@ span{
 .btn:hover{
     box-shadow: none;
 }
+
+.about{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    background: var(--snd-bg-color);
+}
+
+.about-img img{
+    width: 30vw;
+    border-radius: 30px;
+    padding: 10x;
+    background-color: var(--main-color);
+    
+
+}
+
+.heading{
+    text-align: center;
+    font-size: 4.5rem;
+
+}
+
+.about-content h2{
+    text-align: left;
+    line-height: 1.2;
+
+
+}
+
+.about-content h3{
+    font-size: 2.6rem;
+
+}
+
+.about-content p{
+    font-size: 1.6rem;
+    margin: 2rem o 3rem;
+}
+
