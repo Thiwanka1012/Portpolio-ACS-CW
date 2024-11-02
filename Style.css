@@ -267,7 +267,49 @@ span{
 
 }
 
-.Projects-box p{
+.Projects-box p {
     font-size: 1.6rem;
     margin: 1rem 0 3rem;
+}
+
+
+.Contact h2 {
+    margin-bottom: 3rem;
+}
+
+.Contact form {
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.Contact form .input-box {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.Contact form .input-box,
+.Contact form textarea {
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background: var(--snd-bg-color);
+    border-radius: .8rem;
+    margin: .7rem 0;
+}
+
+.Contact form .input-box {
+    width: 49%;
+}
+
+.Contact form textarea {
+    resize: none;
+}
+
+.Contact form .btn {
+    margin-top: 2rem;
+    cursor: pointer;
 }
