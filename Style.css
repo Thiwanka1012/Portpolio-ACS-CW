@@ -290,7 +290,7 @@ span{
     flex-wrap: wrap;
 }
 
-.Contact form .input-box,
+.Contact form .input-box input,
 .Contact form textarea {
     width: 100%;
     padding: 1.5rem;
@@ -301,7 +301,7 @@ span{
     margin: .7rem 0;
 }
 
-.Contact form .input-box {
+.Contact form .input-box input {
     width: 49%;
 }
 
