@@ -83,23 +83,27 @@ section{
     justify-content: center;
     align-items: center;
     
+    
 
 }
 
 .home-content h3{
     font-size: 3.2rem;
     font-weight: 700;
+    
 
 }
 
 .home-content h3:nth-of-type(2){
     margin-bottom: 2rem;
+   
 
 
 }
 
 span{
     color: var(--main-color);
+    
 }
 
 .home-content h1{
@@ -136,6 +140,7 @@ span{
 }
 .home-content p{
     font-size: 1.6rem;
+    margin: 3rem 1.5rem 0;
 }
 
 .social-media a{
@@ -170,6 +175,7 @@ span{
     letter-spacing: .1rem;
     font-weight: 600;
     transition: .5s ease;
+    margin: 3rem 1.5rem 0;
 }
 
 
@@ -221,6 +227,7 @@ span{
 
 .Projects h2{
     margin-bottom: 5rem;
+    font-size:3rem ;
 }
 
 
