@@ -1,4 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap');
+/* Google Front */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap'); 
 
 *{
     margin: 0;
@@ -7,9 +9,11 @@
     text-decoration: none;
     border: none;
     outline: none;
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; 
     font-family: "Nunito", sans-serif;
 }
+
+/* Root,Collection of colour */
 
 :root {
     --bg-color: #191f36;
@@ -27,7 +31,7 @@ html{
 }
 
 body{
-    background: var(--bg-color);
+    background: var(--bg-color);   /*colors */
     color: var(--text-color);
 }
 
@@ -35,6 +39,8 @@ section{
     min-height: 100vh;
     padding: 10rem 9% 2rem;
 }
+
+/* Header Style */
 
 .header{
     position: fixed;
@@ -47,7 +53,7 @@ section{
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    background: linear-gradient(to right, #191f36, #262B40);
+    background: linear-gradient(to right, #191f36, #262B40);   /*  Gradient */
 }
 
 .logo{
@@ -57,6 +63,9 @@ section{
     cursor: default;
 }
 
+/* 
+  Nav Bar */
+
 .navbar a{
     font-size: 1.5rem;
     color: var(--text-color);
@@ -64,7 +73,7 @@ section{
     font-weight: 700;
 }
 
-.navbar a:hover{
+.navbar a:hover{     /*pseudo class*/
     color:yellow;
 
 }
@@ -79,6 +88,7 @@ section{
     
 }
 
+  /* Home Design */
 
 .home{
     display: flex;
@@ -96,7 +106,7 @@ section{
 
 }
 
-.home-content h3:nth-of-type(2){
+.home-content h3:nth-of-type(2){    /*Nth pseudo class*/
     margin-bottom: 2rem;
    
 
@@ -117,18 +127,20 @@ span{
 
 .home-img img{
     width: 25vw;
-    border-radius: 70%;
-    box-shadow: 0 0 20px var(--main-color);
+   border-radius: 70%;              /* Rounded Corner */
+     box-shadow: 0 0 20px var(--main-color);  /*Shadow */
     transition: 0.4s ease-in-out;
     margin: 10rem;
-    animation: floatImage 4s ease-in-out infinite;
+   animation: floatImage 4s ease-in-out infinite;         /* Animation */
 
 
 }
 
+    /* KeyFrame */
+
 @keyframes floatImage{
     0%{
-        transform: translateY(0);    
+        transform: translateY(0);      /* Transform */
     }
     50%{
         transform: translateY(-2.4rem);
@@ -152,12 +164,12 @@ span{
     width: 4rem;
     height: 4rem;
     background: transparent;
-    border: 2rem solid var(--main-color);
+    border: 2rem solid var(--main-color);     /*Border */
     border-radius: 50%;
     font-size: 2rem;
     color: var(--text-color);
     margin: 3rem 1.5rem 0;
-    transition: 5s ease; 
+     transition: 5s ease;               /*Transition */
 }
 
 .social-media a :hover{
@@ -171,7 +183,7 @@ span{
     padding: 1rem 2.8rem;
     background-color: var(--main-color);
     border-radius: 4rem;
-    box-shadow: 0 0 1rem var(--text-color);
+    box-shadow: 0 0 1rem var(--text-color);   /*Shadow */
     font-size: 1.6rem;
     color: var(--bg-color);
     letter-spacing: .1rem;
@@ -182,7 +194,7 @@ span{
 
 
 .btn:hover{
-    box-shadow: none;
+    box-shadow: none;   
 }
 
 
@@ -198,7 +210,7 @@ span{
     width: 30vw;
     border-radius: 30px;
     padding: 10x;
-    background-color: var(--bg-color);
+    background-color: var(--snd-bg-color);
     
 
 }
@@ -261,7 +273,8 @@ span{
     transition: .5s ease;
 }
 
-.Projects-container .Projects-box:hover{
+    font-size: 1.6rem;
+    .Projects-container .Projects-box:hover{    
     border-color: var(--main-color);
     transform: scale(1.02);
 
@@ -278,7 +291,7 @@ span{
 
 }
 
-.Projects-box p {
+ .Projects-box p {      /* Relational Selector */
     font-size: 1.6rem;
     margin: 1rem 0 3rem;
 }
@@ -306,7 +319,7 @@ span{
         border: 2px solid white;
       }
       
-      a[target="_blank"] {
+      a[target="_blank"] {    /*Attribute Selector */
         color: #59B2F4;
       }
 
@@ -340,7 +353,23 @@ span{
     cursor: pointer;
 }
 
+.footer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap:  wrap;
+    padding: 2rem 9%;
+    background: var(--snd-bg-color);
+}
+
+.footer-text{
+    font-size: 1.6rem;
+
+}
+
 /*BREAKPOINT*/
+
+
 
 @media (max-width:1200px){
     html{
@@ -427,3 +456,4 @@ span{
     }
 
 }
+
