@@ -47,6 +47,7 @@ section{
     justify-content: space-between;
     align-items: center;
     z-index: 100;
+    background: linear-gradient(to right, #191f36, #262B40);
 }
 
 .logo{
@@ -232,6 +233,8 @@ span{
 .Projects h2{
     margin-bottom: 5rem;
     font-size:4rem ;
+      
+
 }
 
 .Projects h3  span{
@@ -244,7 +247,7 @@ span{
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    gap: 2rem;
+    gap: 2rem;.
 
 }
 
@@ -299,6 +302,15 @@ span{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    input {
+        border: 2px solid white;
+      }
+      
+      a[target="_blank"] {
+        color: #59B2F4;
+      }
+
+      
 }
 
 .Contact form .input-box input,
@@ -310,14 +322,17 @@ span{
     background: var(--bg-color);
     border-radius: .8rem;
     margin: .7rem 0;
+
 }
 
 .Contact form .input-box input {
     width: 49%;
+
 }
 
 .Contact form textarea {
     resize: none;
+    
 }
 
 .Contact form .btn {
@@ -412,4 +427,3 @@ span{
     }
 
 }
-
