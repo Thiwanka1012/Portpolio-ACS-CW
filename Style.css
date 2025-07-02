@@ -1,7 +1,7 @@
-/* Google Fonts Import */
+/* Google Fonts Import - Requirement 1: Using Google Fonts (Nunito) for consistent typography across the site */
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap'); 
 
-/* Reset and Global Styles */
+/* Reset and Global Styles - Requirement 21: Good indentation for readability */
 * {
     margin: 0;
     padding: 0;
@@ -10,16 +10,16 @@
     border: none;
     outline: none;
     scroll-behavior: smooth; 
-    font-family: "Nunito", sans-serif;
+    font-family: "Nunito", sans-serif; /* Requirement 1: Applying Nunito font globally */
 }
 
-/* Root Variables */
+/* Root Variables - Requirement 2: Defining colors, including semi-transparent color */
 :root {
-    --bg-color: #191f36;
-    --snd-bg-color: #262B40;
-    --text-color: #fff;
-    --main-color: #59B2F4;
-    --semi-transparent: rgba(89, 178, 244, 0.5); /* Semi-transparent color */
+    --bg-color: #191f36; /* Primary background color */
+    --snd-bg-color: #262B40; /* Secondary background color */
+    --text-color: #fff; /* Text color */
+    --main-color: #59B2F4; /* Main accent color */
+    --semi-transparent: rgba(89, 178, 244, 0.5); /* Requirement 2: Semi-transparent color */
 }
 
 /* Base Styles */
@@ -38,7 +38,7 @@ section {
     padding: 5rem 9% 2rem;
 }
 
-/* Header Style */
+/* Header Style - Requirement 16: Gradient background for header */
 .header {
     position: fixed;
     top: 0;
@@ -50,7 +50,7 @@ section {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-    background: linear-gradient(to right, #191f36, #262B40); /* Gradient */
+    background: linear-gradient(to right, #191f36, #262B40); /* Requirement 16: Linear gradient */
 }
 
 .logo {
@@ -61,18 +61,18 @@ section {
 }
 
 /* Navbar Style */
-.navbar > a { /* Child Combinator */
+.navbar > a { /* Requirement 8: Child combinator */
     font-size: 1.5rem;
     color: var(--text-color);
     margin-left: 4rem;
     font-weight: 700;
 }
 
-.navbar a:hover { /* User Action Pseudo Class */
+.navbar a:hover { /* Requirement 7: User action pseudo class (hover) */
     color: yellow;
 }
 
-.navbar a:not(.active) { /* Negation Pseudo Class */
+.navbar a:not(.active) { /* Requirement 10: Negation pseudo class */
     opacity: 0.7;
 }
 
@@ -88,7 +88,6 @@ section {
 
 /*======================== Home Design =============================*/
 
-
 .home {
     display: flex;
     justify-content: center;
@@ -98,14 +97,14 @@ section {
 .home-content h3 {
     font-size: 3.2rem;
     font-weight: 700;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Text Effect */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Requirement 4: Text effect (text-shadow) */
 }
 
-.home-content h3:first-child { /* Structural Selector */
-    color: var(--semi-transparent);
+.home-content h3:first-child { /* Requirement 9: Structural selector (first-child) */
+    color: var(--semi-transparent); /* Requirement 2: Using semi-transparent color */
 }
 
-.home-content h3:nth-of-type(2) { /* Nth Pseudo Class */
+.home-content h3:nth-of-type(2) { /* Requirement 11: Nth pseudo class */
     margin-bottom: 2rem;
 }
 
@@ -121,17 +120,17 @@ span {
 
 .home-img img {
     width: 25vw;
-    border-radius: 70%; /* Rounded Corners */
-    box-shadow: 0 0 20px var(--main-color); /* Shadows */
-    transition: 0.4s ease-in-out; /* Transitions */
+    border-radius: 70%; /* Requirement 15: Rounded corners */
+    box-shadow: 0 0 20px var(--main-color); /* Requirement 3: Shadow */
+    transition: 0.4s ease-in-out; /* Requirement 18: Transition */
     margin: 10rem;
-    animation: floatImage 4s ease-in-out infinite; /* Animation */
+    animation: floatImage 4s ease-in-out infinite; /* Requirement 19: Animation */
 }
 
-/* Animation Keyframe */
+/* Requirement 19: Animation keyframe for floating effect */
 @keyframes floatImage {
     0% {
-        transform: translateY(0); /* Transforms */
+        transform: translateY(0); /* Requirement 17: Transform */
     }
     50% {
         transform: translateY(-2.4rem);
@@ -152,22 +151,22 @@ span {
     align-items: center;
     width: 4rem;
     height: 4rem;
-    background: var(--semi-transparent); /* Semi-transparent color */
-    border: 2rem solid var(--main-color); /* Border */
-    border-radius: 50%; /* Rounded Corners */
+    background: var(--semi-transparent); /* Requirement 2: Semi-transparent color */
+    border: 2rem solid var(--main-color); /* Requirement 14: Border */
+    border-radius: 50%; /* Requirement 15: Rounded corners */
     font-size: 2rem;
     color: var(--text-color);
     margin: 3rem 1.5rem 0;
-    transition: 0.5s ease; /* Transitions */
+    transition: 0.5s ease; /* Requirement 18: Transition */
 }
 
 .social-media a:hover {
     background: var(--main-color);
     color: var(--snd-bg-color);
-    box-shadow: 0 0 3rem var(--main-color); /* Shadows */
+    box-shadow: 0 0 3rem var(--main-color); /* Requirement 3: Shadow on hover */
 }
 
-.social-media a + a { /* Relational Selector */
+.social-media a + a { /* Requirement 13: Relational selector (adjacent sibling) */
     margin-left: 2rem;
 }
 
@@ -175,13 +174,13 @@ span {
     display: inline-block;
     padding: 1rem 2.8rem;
     background-color: var(--main-color);
-    border-radius: 4rem; /* Rounded Corners */
-    box-shadow: 0 0 1rem var(--text-color); /* Shadows */
+    border-radius: 4rem; /* Requirement 15: Rounded corners */
+    box-shadow: 0 0 1rem var(--text-color); /* Requirement 3: Shadow */
     font-size: 1.6rem;
     color: var(--bg-color);
-    letter-spacing: .1rem; /* Text Effects */
+    letter-spacing: .1rem; /* Requirement 4: Text effect (letter-spacing) */
     font-weight: 600;
-    transition: .5s ease; /* Transitions */
+    transition: .5s ease; /* Requirement 18: Transition */
     margin: 3rem 1.5rem 0;
 }
 
@@ -189,11 +188,7 @@ span {
     box-shadow: none;
 }
 
-
-
-
-/*============================== About========================== Section */
-
+/*============================== About Section =============================*/
 
 .about {
     background: var(--snd-bg-color);
@@ -209,16 +204,16 @@ span {
 
 .about-img img {
     width: 25vw;
-    border-radius: 100%; /* Rounded Corners */
-    box-shadow: 0 0 20px var(--main-color); /* Shadows */
-    transition: 0.4s ease-in-out; /* Transitions */
+    border-radius: 100%; /* Requirement 15: Rounded corners */
+    box-shadow: 0 0 20px var(--main-color); /* Requirement 3: Shadow */
+    transition: 0.4s ease-in-out; /* Requirement 18: Transition */
     margin: 10rem;
-    animation: floatImage 4s ease-in-out infinite; /* Animation */ /* Animation  /* Hover transition */
+    animation: floatImage 4s ease-in-out infinite; /* Requirement 19: Animation */
 }
 
 .about-img img:hover {
-    transform: scale(1.1); /* Larger hover effect */
-    box-shadow: 0 0 4rem var(--main-color); /* Enhanced shadow on hover */
+    transform: scale(1.1); /* Requirement 17: Transform on hover */
+    box-shadow: 0 0 4rem var(--main-color); /* Requirement 3: Enhanced shadow on hover */
 }
 
 .about-content {
@@ -228,7 +223,7 @@ span {
 .about-content h2 {
     font-size: 4rem;
     text-align: left;
-    line-height: 1.2; /* Text Effects */
+    line-height: 1.2; /* Requirement 4: Text effect (line-height) */
     margin-bottom: 2rem;
 }
 
@@ -242,14 +237,15 @@ span {
     margin-bottom: 2rem;
 }
 
-/*============= Skills Section============ */
+/*============= Skills Section ============*/
+
 .skills {
     background: var(--snd-bg-color);
     padding: 5rem 9%;
 }
 
 .skills h2 {
-    margin-bottom: 5rem; /* Reduced margin for better spacing */
+    margin-bottom: 5rem;
     font-size: 4rem;
     text-align: center;
 }
@@ -265,16 +261,16 @@ span {
 .skill-box {
     background: var(--bg-color);
     padding: 2rem;
-    border-radius: 1.5rem; /* Rounded Corners */
+    border-radius: 1.5rem; /* Requirement 15: Rounded corners */
     text-align: center;
-    border: 0.2rem solid var(--main-color); /* Border */
-    box-shadow: 0 0 1rem var(--semi-transparent); /* Shadows with semi-transparent color */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transitions */
+    border: 0.2rem solid var(--main-color); /* Requirement 14: Border */
+    box-shadow: 0 0 1rem var(--semi-transparent); /* Requirement 3: Shadow with semi-transparent color */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Requirement 18: Transition */
 }
 
 .skill-box:hover {
-    transform: scale(1.05); /* Transform on hover */
-    box-shadow: 0 0 2rem var(--main-color); /* Enhanced shadow on hover */
+    transform: scale(1.05); /* Requirement 17: Transform on hover */
+    box-shadow: 0 0 2rem var(--main-color); /* Requirement 3: Enhanced shadow on hover */
 }
 
 .skill-box i {
@@ -286,7 +282,7 @@ span {
 .skill-box h3 {
     font-size: 2.2rem;
     margin-bottom: 1rem;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Text Effect */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Requirement 4: Text effect (text-shadow) */
 }
 
 .skill-box p {
@@ -294,11 +290,7 @@ span {
     color: var(--text-color);
 }
 
-
-
-
-/*==========================Projects Section============================= */
-
+/*========================== Projects Section =============================*/
 
 .Projects h2 {
     margin-bottom: 5rem;
@@ -322,10 +314,10 @@ span {
     flex: 1 1 30rem;
     background: var(--snd-bg-color);
     padding: 3rem 2rem 4rem;
-    border-radius: 2rem;
+    border-radius: 2rem; /* Requirement 15: Rounded corners */
     text-align: center;
-    border: .2rem solid var(--bg-color);
-    transition: .5s ease;
+    border: .2rem solid var(--bg-color); /* Requirement 14: Border */
+    transition: .5s ease; /* Requirement 18: Transition */
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -334,7 +326,7 @@ span {
     box-sizing: border-box;
 }
 
-.Projects-box::before {
+.Projects-box::before { /* Requirement 6: Pseudo element with generated content */
     content: "Project";
     font-size: 1.8rem;
     color: var(--main-color);
@@ -344,7 +336,7 @@ span {
 
 .Projects-box:hover {
     border-color: var(--main-color);
-    transform: scale(1.02);
+    transform: scale(1.02); /* Requirement 17: Transform on hover */
 }
 
 .project-image {
@@ -352,7 +344,7 @@ span {
     height: 150px;
     object-fit: cover;
     margin-bottom: 1rem;
-    border-radius: 10px;
+    border-radius: 10px; /* Requirement 15: Rounded corners */
 }
 
 .Projects-box h3 {
@@ -365,10 +357,7 @@ span {
     flex-grow: 1;
 }
 
-/* ======================================Contact Section ===================================*/
-
-
-
+/* ====================================== Contact Section ===================================*/
 
 .Contact {
     background-color: var(--snd-bg-color);
@@ -377,7 +366,7 @@ span {
 .Contact h2 {
     font-size: 4rem;
     text-align: center;
-    line-height: 1.2; /* Text Effects */
+    line-height: 1.2; /* Requirement 4: Text effect (line-height) */
     margin-bottom: 2rem;
     padding-top: 10rem;
 }
@@ -395,8 +384,8 @@ span {
     flex-wrap: wrap;
 }
 
-.Contact form .input-box input[type="text"],
-.Contact form .input-box input[type="email"],
+.Contact form .input-box input[type="text"], /* Requirement 5: Attribute selector */
+.Contact form .input-box input[type="email"], /* Requirement 5: Attribute selector */
 .Contact form .input-box input[type="tel"],
 .Contact form textarea {
     width: 100%;
@@ -404,9 +393,9 @@ span {
     font-size: 1.6rem;
     color: var(--text-color);
     background: var(--bg-color);
-    border-radius: .8rem;
+    border-radius: .8rem; /* Requirement 15: Rounded corners */
     margin: .7rem 0;
-    border: 2px solid var(--text-color);
+    border: 2px solid var(--text-color); /* Requirement 14: Border */
 }
 
 .Contact form .input-box input {
@@ -417,11 +406,11 @@ span {
     resize: none;
 }
 
-.Contact form .input-box input:valid {
+.Contact form .input-box input:valid { /* Requirement 12: Validity pseudo class */
     border-color: green;
 }
 
-.Contact form .input-box input:invalid {
+.Contact form .input-box input:invalid { /* Requirement 12: Validity pseudo class */
     border-color: red;
 }
 
@@ -430,10 +419,7 @@ span {
     cursor: pointer;
 }
 
-/*====================== Footer Section============================ */
-
-
-
+/*====================== Footer Section =============================*/
 
 .footer {
     display: flex;
@@ -454,17 +440,17 @@ span {
     align-items: center;
     padding: 0.8rem;
     background: var(--main-color);
-    border-radius: 0.8rem;
-    transition: 0.5s ease;
+    border-radius: 0.8rem; /* Requirement 15: Rounded corners */
+    transition: 0.5s ease; /* Requirement 18: Transition */
 }
 
 .footer-iconTop a:hover {
-    box-shadow: 0 0 1rem var(--main-color);
+    box-shadow: 0 0 1rem var(--main-color); /* Requirement 3: Shadow on hover */
 }
 
-/* Specificity Consideration: Using class selectors (.navbar, .btn) over ID selectors to maintain lower specificity and easier overrides. Variables in :root help manage consistent styling. */
+/* Requirement 20: Specificity consideration - Using class selectors (.navbar, .btn) over ID selectors to maintain lower specificity and easier overrides. Variables in :root ensure consistent styling across the site. */
 
-/* Media Queries for Responsiveness */
+/* Media Queries for Responsiveness - Requirement 21: Good indentation */
 @media (max-width: 1200px) {
     html {
         font-size: 55%;
@@ -489,7 +475,7 @@ span {
         padding: 7rem;
     }
     .Contact {
-        min-height: auto;
+        min Cassandraheight: auto;
     }
 }
 
@@ -504,10 +490,10 @@ span {
         width: 100%;
         padding: 1rem 3%;
         background: var(--bg-color);
-        border-top: .1rem solid rgba(0, 0, 0, .2);
-        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+        border-top: .1rem solid rgba(0, 0, 0, .2); /* Requirement 14: Border */
+        box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2); /* Requirement 3: Shadow */
         display: none;
-        transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out; /* Requirement 18: Transition */
     }
     .navbar.active {
         display: block;
