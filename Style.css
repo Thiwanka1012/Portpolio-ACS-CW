@@ -86,7 +86,9 @@ section {
     display: none;
 }
 
-/* Home Design */
+/*======================== Home Design =============================*/
+
+
 .home {
     display: flex;
     justify-content: center;
@@ -187,7 +189,12 @@ span {
     box-shadow: none;
 }
 
-/* About Section */
+
+
+
+/*============================== About========================== Section */
+
+
 .about {
     background: var(--snd-bg-color);
     padding: 5rem 9%;
@@ -202,11 +209,11 @@ span {
 
 .about-img img {
     width: 25vw;
-    border-radius: 70%; /* Rounded Corners */
+    border-radius: 100%; /* Rounded Corners */
     box-shadow: 0 0 20px var(--main-color); /* Shadows */
     transition: 0.4s ease-in-out; /* Transitions */
     margin: 10rem;
-    animation: floatImage 4s ease-in-out infinite; /* Animation  /* Hover transition */
+    animation: floatImage 4s ease-in-out infinite; /* Animation */ /* Animation  /* Hover transition */
 }
 
 .about-img img:hover {
@@ -235,14 +242,14 @@ span {
     margin-bottom: 2rem;
 }
 
-/* Skills Section */
+/*============= Skills Section============ */
 .skills {
     background: var(--snd-bg-color);
     padding: 5rem 9%;
 }
 
 .skills h2 {
-    margin-bottom: 3rem; /* Reduced margin for better spacing */
+    margin-bottom: 5rem; /* Reduced margin for better spacing */
     font-size: 4rem;
     text-align: center;
 }
@@ -287,10 +294,16 @@ span {
     color: var(--text-color);
 }
 
-/* Projects Section */
+
+
+
+/*==========================Projects Section============================= */
+
+
 .Projects h2 {
     margin-bottom: 5rem;
     font-size: 4rem;
+    padding-top: 10rem;
 }
 
 .Projects h3 span {
@@ -352,13 +365,21 @@ span {
     flex-grow: 1;
 }
 
-/* Contact Section */
+/* ======================================Contact Section ===================================*/
+
+
+
+
 .Contact {
     background-color: var(--snd-bg-color);
 }
 
 .Contact h2 {
-    margin-bottom: 3rem;
+    font-size: 4rem;
+    text-align: center;
+    line-height: 1.2; /* Text Effects */
+    margin-bottom: 2rem;
+    padding-top: 10rem;
 }
 
 .Contact form {
@@ -409,7 +430,11 @@ span {
     cursor: pointer;
 }
 
-/* Footer Section */
+/*====================== Footer Section============================ */
+
+
+
+
 .footer {
     display: flex;
     justify-content: space-between;
