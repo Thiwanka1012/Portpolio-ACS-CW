@@ -19,6 +19,7 @@
     --snd-bg-color: #262B40;
     --text-color: #fff;
     --main-color: #59B2F4;
+    --semi-transparent: rgba(89, 178, 244, 0.5); /* Semi-transparent color */
 }
 
 /* Base Styles */
@@ -33,8 +34,8 @@ body {
 }
 
 section {
-    min-height: 100vh;
-    padding: 10rem 9% 2rem;
+    min-height: 50vh; /* Reduced for better balance */
+    padding: 5rem 9% 2rem;
 }
 
 /* Header Style */
@@ -95,6 +96,11 @@ section {
 .home-content h3 {
     font-size: 3.2rem;
     font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Text Effect */
+}
+
+.home-content h3:first-child { /* Structural Selector */
+    color: var(--semi-transparent);
 }
 
 .home-content h3:nth-of-type(2) { /* Nth Pseudo Class */
@@ -144,19 +150,23 @@ span {
     align-items: center;
     width: 4rem;
     height: 4rem;
-    background: transparent;
+    background: var(--semi-transparent); /* Semi-transparent color */
     border: 2rem solid var(--main-color); /* Border */
     border-radius: 50%; /* Rounded Corners */
     font-size: 2rem;
     color: var(--text-color);
     margin: 3rem 1.5rem 0;
-    transition: 5s ease; /* Transitions */
+    transition: 0.5s ease; /* Transitions */
 }
 
 .social-media a:hover {
     background: var(--main-color);
     color: var(--snd-bg-color);
     box-shadow: 0 0 3rem var(--main-color); /* Shadows */
+}
+
+.social-media a + a { /* Relational Selector */
+    margin-left: 2rem;
 }
 
 .btn {
@@ -179,38 +189,102 @@ span {
 
 /* About Section */
 .about {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 2rem;
     background: var(--snd-bg-color);
+    padding: 5rem 9%;
+}
+
+.about-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
 }
 
 .about-img img {
-    width: 30vw;
-    border-radius: 30px; /* Rounded Corners */
-    padding: 10px; /* Fixed from 10x */
-    background-color: var(--snd-bg-color);
+    width: 25vw;
+    border-radius: 70%; /* Rounded Corners */
+    box-shadow: 0 0 20px var(--main-color); /* Shadows */
+    transition: 0.4s ease-in-out; /* Transitions */
+    margin: 10rem;
+    animation: floatImage 4s ease-in-out infinite; /* Animation  /* Hover transition */
 }
 
-.heading {
-    text-align: center;
-    font-size: 4.5rem;
+.about-img img:hover {
+    transform: scale(1.1); /* Larger hover effect */
+    box-shadow: 0 0 4rem var(--main-color); /* Enhanced shadow on hover */
+}
+
+.about-content {
+    flex: 1;
 }
 
 .about-content h2 {
+    font-size: 4rem;
     text-align: left;
     line-height: 1.2; /* Text Effects */
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .about-content h3 {
     font-size: 2.6rem;
+    margin-bottom: 1rem;
 }
 
 .about-content p {
     font-size: 1.6rem;
-    margin: 2rem 0 3rem;
+    margin-bottom: 2rem;
+}
+
+/* Skills Section */
+.skills {
+    background: var(--snd-bg-color);
+    padding: 5rem 9%;
+}
+
+.skills h2 {
+    margin-bottom: 3rem; /* Reduced margin for better spacing */
+    font-size: 4rem;
+    text-align: center;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.skill-box {
+    background: var(--bg-color);
+    padding: 2rem;
+    border-radius: 1.5rem; /* Rounded Corners */
+    text-align: center;
+    border: 0.2rem solid var(--main-color); /* Border */
+    box-shadow: 0 0 1rem var(--semi-transparent); /* Shadows with semi-transparent color */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transitions */
+}
+
+.skill-box:hover {
+    transform: scale(1.05); /* Transform on hover */
+    box-shadow: 0 0 2rem var(--main-color); /* Enhanced shadow on hover */
+}
+
+.skill-box i {
+    font-size: 4rem;
+    color: var(--main-color);
+    margin-bottom: 1rem;
+}
+
+.skill-box h3 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Text Effect */
+}
+
+.skill-box p {
+    font-size: 1.4rem;
+    color: var(--text-color);
 }
 
 /* Projects Section */
@@ -231,21 +305,20 @@ span {
     margin: 0 auto;
 }
 
-
 .Projects-box {
-    flex: 1 1 30rem; /* Uniform width */
+    flex: 1 1 30rem;
     background: var(--snd-bg-color);
-    padding: 3rem 2rem 4rem; /* Consistent padding */
+    padding: 3rem 2rem 4rem;
     border-radius: 2rem;
     text-align: center;
     border: .2rem solid var(--bg-color);
     transition: .5s ease;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Evenly distribute content */
-    min-height: 450px; /* Uniform height for all boxes */
-    max-width: 380px; /* Wider individual boxes */
-    box-sizing: border-box; /* Include padding in height calculation */
+    justify-content: space-between;
+    min-height: 450px;
+    max-width: 380px;
+    box-sizing: border-box;
 }
 
 .Projects-box::before {
@@ -263,10 +336,10 @@ span {
 
 .project-image {
     width: 100%;
-    height: 150px; /* Fixed height for photos */
-    object-fit: cover; /* Ensure image fits without distortion */
+    height: 150px;
+    object-fit: cover;
     margin-bottom: 1rem;
-    border-radius: 10px; /* Optional: Rounded corners for images */
+    border-radius: 10px;
 }
 
 .Projects-box h3 {
@@ -276,7 +349,7 @@ span {
 .Projects-box p {
     font-size: 1.6rem;
     margin: 1rem 0 3rem;
-    flex-grow: 1; /* Allow text to fill space evenly */
+    flex-grow: 1;
 }
 
 /* Contact Section */
@@ -303,6 +376,7 @@ span {
 
 .Contact form .input-box input[type="text"],
 .Contact form .input-box input[type="email"],
+.Contact form .input-box input[type="tel"],
 .Contact form textarea {
     width: 100%;
     padding: 1.5rem;
@@ -349,6 +423,22 @@ span {
     font-size: 1.6rem;
 }
 
+.footer-iconTop a {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.8rem;
+    background: var(--main-color);
+    border-radius: 0.8rem;
+    transition: 0.5s ease;
+}
+
+.footer-iconTop a:hover {
+    box-shadow: 0 0 1rem var(--main-color);
+}
+
+/* Specificity Consideration: Using class selectors (.navbar, .btn) over ID selectors to maintain lower specificity and easier overrides. Variables in :root help manage consistent styling. */
+
 /* Media Queries for Responsiveness */
 @media (max-width: 1200px) {
     html {
@@ -361,7 +451,14 @@ span {
         padding: 2rem 3%;
     }
     section {
-        padding: 10rem 3%;
+        padding: 5rem 3%;
+    }
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+    .about-img img {
+        width: 60vw; /* Adjusted for tablet */
     }
     .Projects {
         padding: 7rem;
@@ -385,6 +482,7 @@ span {
         border-top: .1rem solid rgba(0, 0, 0, .2);
         box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
         display: none;
+        transition: all 0.3s ease-in-out;
     }
     .navbar.active {
         display: block;
@@ -410,10 +508,35 @@ span {
         width: 70vw;
         margin-top: 4rem;
     }
-    .about {
+    .about-container {
         flex-direction: column;
+    }
+    .about-img img {
+        width: 70vw; /* Adjusted for mobile */
+    }
+    .skills {
+        padding: 5rem 3%;
     }
     .Projects h2 {
         margin-bottom: 3rem;
+    }
+}
+
+/* Tablet-specific Media Query */
+@media (max-width: 600px) {
+    html {
+        font-size: 50%;
+    }
+    .home-img img {
+        width: 80vw;
+    }
+    .about-img img {
+        width: 80vw; /* Larger mobile photo */
+    }
+    .Projects-container {
+        grid-template-columns: 1fr;
+    }
+    .skills-container {
+        grid-template-columns: 1fr;
     }
 }
